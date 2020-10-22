@@ -1,27 +1,16 @@
 # MoneySucker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
+# Gameplay
 
-## Development server
+Lass deinem Kaufrausch freien Lauf. Je wilder dein einkauf ist desto besser, aber beachte: ihr führt zwar ein eher extravagantes leben, doch wenn der betrag zu hoch wird, wird es auffällig und die Kredikartenrechnung platzt - game
+over. Sei also vorsichtig. Kauffläche muss besonders attraktiv sein. Es gibt ein satisfaction
+barometer. Monatsabrechnung kommt in einem spezifischen random-zeitraum vor, der dem Spieler vorenthalten bleibt. Wenn du
+trödelst, keine satisfaction und du verlierst. Möglichst viel kaufen. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# specifications
 
-## Code scaffolding
+Es gibt einen einkaufswagen der unter dem quadratischen Spielfeld angezeigt wird. Entweder happy oder sad face je nach Spielstand. Gibt farbe die umherschwirrt und schneller wird, man muss auf objekt klicken bevor farbe eskaliert. typ und menge an geld muss stimmen, wenn zu viel von gleichem typ game over, wenn typ stimmt aber menge zu hoch dann
+einkaufswagen immer grösser und explodiert. Wenn menge zu hoch wird oder von gleichem
+typ kann man in einen abfalleimer drag'n'drop. Liste von objekten wird unten oberhalb vom
+einkaufswagen aber unterhalb vom einkaufsfeld angezeigt.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

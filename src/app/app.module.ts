@@ -9,6 +9,7 @@ import { ComponentsComponent } from './objectContainer/components/components.com
 import { ObjectContainerComponent } from './components/object-container/object-container.component';
 import { GroceryListComponent } from './components/grocery-list/grocery-list.component';
 import { BasketComponent } from './components/basket/basket.component';
+import { NewGameComponent } from './components/new-game/new-game.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BasketComponent } from './components/basket/basket.component';
     ComponentsComponent,
     ObjectContainerComponent,
     GroceryListComponent,
-    BasketComponent
+    BasketComponent,
+    NewGameComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CreditCardService } from '../../services/credit-card.service';
 import { Product } from '../../models/product';
-import { ProductDataService } from '../../services/rules.service';
+import { RulesService } from '../../services/rules.service';
+import { Balance } from 'src/app/models/balance';
 
 
 @Component({
@@ -32,10 +33,10 @@ export class ObjectFieldComponent implements OnInit {
   
 
 
-  constructor(private prodDataService: ProductDataService, private creditCardService: CreditCardService) { }
+  constructor(private ruleService: RulesService, private creditCardService: CreditCardService) { }
 
   ngOnInit() {
-    this.prodDataService.newProduct.subscribe(groceryList => { this.groceryList = groceryList });
+    this.ruleService.newProduct.subscribe(groceryList => { this.groceryList = groceryList });
   }
 
   createProduct(){
@@ -55,15 +56,12 @@ export class ObjectFieldComponent implements OnInit {
 
 
   updateGroceryList(){
-    this.prodDataService.getNextProduct(this.groceryList);
+    this.ruleService.getNextProduct(this.groceryList);
   }
 
   getAllProducts():Product[]{
     return this.groceryList;
   }
-
-
-  
 
 
 

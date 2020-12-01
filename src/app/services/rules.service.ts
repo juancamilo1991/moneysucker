@@ -95,7 +95,7 @@ isTypeAmountAcceptable(typeAmount: number, totalProducts: Product[]):boolean{
       }
       if(value.balanced){
       let imbalancedTypes = this.validateTypes(totalProducts); //returns array of alert messages
-        if(imbalancedTypes.length) imbalances[property].push(imbalancedTypes)
+        if(imbalancedTypes.length) imbalances[property] = imbalancedTypes;
       }
       return imbalances;
     }, accumulatorBalance)
@@ -122,27 +122,7 @@ isTypeAmountAcceptable(typeAmount: number, totalProducts: Product[]):boolean{
   }
 
 
-  limitExceeded(totalProducts, limit):boolean{
-    //enter too "high zone"
-    if(this.getCurrentTotalPrice(totalProducts) >= limit) return true;
 
-      return false
-  }
-
-
-  totalTooLow(data):boolean{
-    if((this.ruleService.getCurrentTotalPrice(data) < (this.credCardLimit/2))){
-      return true;
-    }
-    else { return false }
-  }
-
-
-  priceOk(data){
-    if(!this.limitExceeded(data)&&!this.totalTooLow(data)){
-      return true;
-    }
-    else { return false; }
-  }
+  
 
 }

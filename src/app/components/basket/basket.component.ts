@@ -25,37 +25,37 @@ export class BasketComponent implements OnInit {
   }
 
 
-  basketExploding():boolean{
-    if((this.credCardService.limitExceeded(this.data) && !this.prodDataService.isTypeAmountAcceptable(this.data)) ||
-    this.credCardService.limitExceeded(this.data))
-        { return true }
-          else return false
-  }
+  // basketExploding():boolean{
+  //   if((this.credCardService.limitExceeded(this.data) && !this.prodDataService.isTypeAmountAcceptable(this.data)) ||
+  //   this.credCardService.limitExceeded(this.data))
+  //       { return true }
+  //         else return false
+  // }
 
 
-  basketDying():boolean{
-    if((this.credCardService.limitExceeded(this.data) && !this.prodDataService.isTypeAmountAcceptable(this.data)) || 
-        this.credCardService.totalTooLow(this.data))
-        { return true }
-          else return false
-   }
+  // basketDying():boolean{
+  //   if((this.credCardService.limitExceeded(this.data) && !this.prodDataService.isTypeAmountAcceptable(this.data)) || 
+  //       this.credCardService.totalTooLow(this.data))
+  //       { return true }
+  //         else return false
+  //  }
 
 
-   basketOk():boolean{
-    if(this.credCardService.priceOk(this.data) && this.prodDataService.isTypeAmountAcceptable(this.data))
-      { return true }
-        else return false 
-  }
+  //  basketOk():boolean{
+  //   if(this.credCardService.priceOk(this.data) && this.prodDataService.isTypeAmountAcceptable(this.data))
+  //     { return true }
+  //       else return false 
+  // }
 
 
-  checkBasketState(){
-    let basket = {
-      "basket-ok": this.basketOk(),
-      "basket-dying": this.basketDying(),
-      "basket-exploding": this.basketExploding()
-    }
-    return basket;
-  }
+  // checkBasketState(){
+  //   let basket = {
+  //     "basket-ok": this.basketOk(),
+  //     "basket-dying": this.basketDying(),
+  //     "basket-exploding": this.basketExploding()
+  //   }
+  //   return basket;
+  // }
 
 
 

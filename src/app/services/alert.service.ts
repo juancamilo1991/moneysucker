@@ -12,10 +12,11 @@ export class AlertService {
 
 
 
-  printAlerts<T>(alerts: T):void{
-    
-  }
+  printAlerts<T>(alerts: T):string[]{
+   return Object.values(alerts).map((alert, counter) => alert.concat(Object.values(alerts)[++counter]))[0]
+ }
 
 
+ 
 
 }
